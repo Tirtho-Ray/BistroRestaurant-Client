@@ -1,0 +1,11 @@
+.menu {
+    transition: all 0.3s ease;
+}
+
+.slide-out {
+    transform: translateX(-100%);
+}
+
+.slide-in {
+    transform: translateX(0);
+}

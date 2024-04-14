@@ -1,0 +1,15 @@
+.carousel .thumbs-wrapper {
+    height: 80px;
+     /* Adjust the height as needed */
+}
+
+.carousel .thumbs {
+    height: 100%; /* Ensure the thumbs take up the full height of the wrapper */
+}
+.carousel .thumbs-wrapper {
+    height: 100px; /* Adjust the height of the thumbnail wrapper */
+}
+
+.carousel .thumbs img {
+    height: 100%; /* Ensure the thumbnails take up the full height of the wrapper */
+}

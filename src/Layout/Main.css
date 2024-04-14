@@ -1,0 +1,14 @@
+/* Main.css */
+.backdrop {
+    backdrop-filter: blur(100px);
+    background-color: rgba(255, 255, 255, 0.1); /* Adjust the transparency as needed */
+  }
+  
+  .sticky .navbar {
+    background-color: transparent;
+    filter: blur(1000px); /* Adjust blur amount as needed */
+  }
+  
+  .sticky.scrolled .navbar {
+    background-color: rgba(0, 0, 0, 0.8); /* Adjust the transparency as needed */
+  }
