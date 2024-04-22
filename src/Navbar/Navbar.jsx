@@ -19,7 +19,7 @@ const Navbar = () => {
   //   logOut()
   //   .then(()=>{})
   //   .catch(err =>{
-  //     console.log(err);
+  //     //console.log(err);
   //   })
   // }
   const handelLogout = () => {
@@ -37,7 +37,7 @@ const Navbar = () => {
         logOut()
           .then(() => { })
           .catch(err => {
-            console.log(err);
+            //console.log(err);
           })
       }
     });

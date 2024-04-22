@@ -12,7 +12,7 @@ const UpdateProduct = () => {
     const axiosPublic = useAxiosPublic();
    const axiosSecure = useAxiosSecure();
    const onSubmit = async (data) => {
-     console.log(data);
+     //console.log(data);
      const menuItem = {
        name: data.name,
        category: data.category,
@@ -21,7 +21,7 @@ const UpdateProduct = () => {
        recipe: data.recipe 
      };
      const menuRes = await axiosSecure.patch(`/menu/${item._id}`,menuItem);
-     console.log(menuRes.data);
+     //console.log(menuRes.data);
      if(menuRes.data.modifiedCount>0){
        Swal.fire({
          position: "top-end",

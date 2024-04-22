@@ -5,7 +5,7 @@ import DashSectionHeading from "../../Shared/DashSectionHeading";
 import { useForm } from "react-hook-form";
 
 // const image_hosting_key = import.meta.env.VITE_ImageHosting_Key;
-// console.log(image_hosting_key);
+// //console.log(image_hosting_key);
 // const image_hosting_api =`https://api.imgbb.com/1/upload?key=${image_hosting_key}`
 
 
@@ -14,7 +14,7 @@ const AdminAddItem = () => {
   const axiosPublic = useAxiosPublic();
   const axiosSecure = useAxiosSecure();
   const onSubmit = async (data) => {
-    console.log(data);
+    //console.log(data);
 
     // image upload image bb
     // const imageData = {image: data.image[0]}
@@ -24,7 +24,7 @@ const AdminAddItem = () => {
     //     'Content-Type':'multipart/form-data'
     //   }
     // });
-    // console.log(res.data);
+   // ////console.log(res.data);
     const menuItem = {
       name: data.name,
       category: data.category,
@@ -33,7 +33,7 @@ const AdminAddItem = () => {
       recipe: data.recipe 
     };
     const menuRes = await axiosSecure.post('/menu',menuItem);
-    console.log(menuRes.data);
+    //console.log(menuRes.data);
     if(menuRes.data.insertedId){
       Swal.fire({
         position: "top-end",

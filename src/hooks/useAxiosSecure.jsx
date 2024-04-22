@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProvider';
 
 const axiosSecure = axios.create({
-    baseURL: 'http://localhost:5000'
+    baseURL: 'https://bistro-restaurente-server.vercel.app'
 });
 
 const useAxiosSecure = () => {
@@ -27,7 +27,7 @@ const useAxiosSecure = () => {
             return response;
         },
         async function(error) {
-            console.log("Error response:", error.response)
+            //console.log("Error response:", error.response)
             const status = error.response.status;
             // for 403 0r 401 logout the user and move the user to login page
             if (status === 401 || status === 403) {

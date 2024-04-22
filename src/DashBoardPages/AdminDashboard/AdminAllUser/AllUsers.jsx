@@ -22,7 +22,7 @@ const AllUsers = () => {
     axiosSecure.patch(`/users/admin/${user._id}`)
     
     .then(res =>{
-        console.log(res.data);
+       ////console.log(res.data);
         if(res.data.modifiedCount>0){
             refetch();
             Swal.fire({
@@ -35,14 +35,14 @@ const AllUsers = () => {
         }
     })
     .catch(err=>{
-        console.log(err);
+        //console.log(err);
     })
   }
 
   const handelDelete = user => {
     // Check if the current user has admin role
     if (user.role !== 'admin') {
-      console.log("Only admin users can delete other users.");
+      //console.log("Only admin users can delete other users.");
       return;
     }
   
@@ -58,7 +58,7 @@ const AllUsers = () => {
       if (result.isConfirmed) {
         axiosSecure.delete(`/users/${user._id}`)
           .then(res => {
-            console.log(res);
+            //console.log(res);
             if (res.data.deletedCount > 0) {
               // Delete user from Firebase Auth
               const auth = getAuth();
@@ -77,7 +77,7 @@ const AllUsers = () => {
             }
           })
           .catch(err => {
-            console.log(err);
+            //console.log(err);
           });
       }
     });

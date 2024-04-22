@@ -53,7 +53,7 @@ const AuthProvider = ({children}) => {
         })
           .then(() => {
             setLoading(false);
-            console.log("Profile updated successfully.");
+            //console.log("Profile updated successfully.");
           })
           .catch((error) => {
             setLoading(false);
@@ -65,7 +65,7 @@ const AuthProvider = ({children}) => {
     useEffect(()=>{
        const unsubscribe = onAuthStateChanged(auth,currentUser =>{
             setUser(currentUser)
-            console.log('current user',currentUser);
+            //console.log('current user',currentUser);
             if(currentUser){
                 const userInfo = {email:currentUser.email}
                 axiosPublic.post('/jwt',userInfo)

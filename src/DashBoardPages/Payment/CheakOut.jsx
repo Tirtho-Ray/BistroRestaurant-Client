@@ -15,7 +15,7 @@ const CheakOut = () => {
   const {user} = useContext(AuthContext);
   const navigate = useNavigate()
   const totalPrice = cart.reduce((total, item) => total + item.price, 0);
-  // console.log(totalPrice);
+  // //console.log(totalPrice);
 
 
   const stripe = useStripe();
@@ -25,7 +25,7 @@ const CheakOut = () => {
    if(totalPrice>0){
     axiosSecure.post('/create-payment-intent', { price: totalPrice })
       .then(res => {
-        console.log(res.data.clientSecret);
+        //console.log(res.data.clientSecret);
         setClientSecret(res.data.clientSecret);
       })
       .catch(error => {
@@ -49,10 +49,10 @@ const CheakOut = () => {
         card,
       });
       if (error) {
-        console.log("Payment error:", error);
+        //console.log("Payment error:", error);
         setError(error.message);
       } else {
-        console.log("Payment method:", paymentMethod);
+        //console.log("Payment method:", paymentMethod);
         setError("");
       }
     } catch (error) {
@@ -70,15 +70,15 @@ const CheakOut = () => {
       }
     })
     if(confirmError){
-      console.log('confirmation error');
+      //console.log('confirmation error');
     }else{
-      console.log('success',paymentIntent);
+      //console.log('success',paymentIntent);
       if(paymentIntent.status
         ==='succeeded'){
-        console.log('id',paymentIntent.id);
+        //console.log('id',paymentIntent.id);
         setTid(paymentIntent.id);
         const name = cart.map(item => item.name);
-        console.log(name);
+        //console.log(name);
         const payment ={
           email:user.email,
           price:totalPrice,
@@ -95,7 +95,7 @@ const CheakOut = () => {
         
         try {
           const res = await axiosSecure.post('/payments', payment);
-          console.log(res);
+          //console.log(res);
           if (res.data?.paymentResult?.insertedId) {
             Swal.fire({
               position: "top-end",

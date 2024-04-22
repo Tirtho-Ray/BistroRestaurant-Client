@@ -6,7 +6,7 @@ import { NavLink, Navigate } from "react-router-dom";
 
 const Payment = () => {
   const stripPayment = loadStripe(import.meta.env.VITE_PAYMENT);
-  console.log(stripPayment);
+  //console.log(stripPayment);
   return (
     <div>
       <div>

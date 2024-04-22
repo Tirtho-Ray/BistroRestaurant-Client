@@ -33,10 +33,10 @@ const SignUp = () => {
   const from = location.state?.form?.pathname || "/";
 
   const onSubmit = (data) => {
-    // console.log(data);
+    // //console.log(data);
     createUser(data.email, data.password).then((result) => {
       const logUser = result.user;
-      //   console.log(logUser);
+      //   //console.log(logUser);
       updateUserprofile(data.name)
         .then(() => {
           const userInfo = {
@@ -46,7 +46,7 @@ const SignUp = () => {
           // post email to db
           axiosPublic.post("/users", userInfo).then((res) => {
             if (res.data.insertedId) {
-                console.log('user add');
+                //console.log('user add');
               reset();
               Swal.fire({
                 position: "top-end",
@@ -60,7 +60,7 @@ const SignUp = () => {
           });
         })
         .catch((err) => {
-          console.log(err);
+          //console.log(err);
         });
     });
   };

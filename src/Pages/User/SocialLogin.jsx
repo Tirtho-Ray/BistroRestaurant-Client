@@ -17,7 +17,7 @@ const SocialLogin = () => {
         
       };
       axiosPublic.post("/users", userInfo).then((res) => {
-        console.log(res.data);
+       ////console.log(res.data);
         navigate(from, { replace: true });
 
       });
@@ -32,7 +32,7 @@ const SocialLogin = () => {
   //         name: result.user?.displayName,
   //       };
   //       axiosPublic.post("/users", userInfo).then((res) => {
-  //         console.log(res.data);
+  //        ////console.log(res.data);
   //         navigate(from, { replace: true }); // Make sure to complete this line
   //       });
   //     })
@@ -49,7 +49,7 @@ const SocialLogin = () => {
           name: result.user?.displayName,
         };
         axiosPublic.post("/users", userInfo).then((res) => {
-          console.log(res.data);
+         ////console.log(res.data);
           navigate(from, { replace: true });
         });
       })
