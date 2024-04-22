@@ -25,7 +25,7 @@ const Banner = () => {
 
     return (
         <div className=''>
-            <Carousel autoPlay  interval={3000} showArrows={false} showStatus={false} showIndicators={true} showThumbs={true} onChange={handleSlideChange} infiniteLoop >
+            <Carousel autoPlay  interval={2000} showArrows={false} showStatus={false} showIndicators={true} showThumbs={true} onChange={handleSlideChange} infiniteLoop >
                 <div>
                     <img className='h-auto md:h-300 lg:h-[500px]'  src={img1} alt="Slide 1" />
                 </div>

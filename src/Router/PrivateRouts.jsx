@@ -13,6 +13,7 @@ const PrivateRouts = ({ children }) => {
         </div>
       </>
     );
+    
   }
   if (user) {
     return children;
